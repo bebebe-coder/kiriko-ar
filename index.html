@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>キリコAR</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="ar-shell">
+      <video id="camera" class="camera" autoplay playsinline muted></video>
+
+      <section class="kiriko-stage" aria-label="AR表示">
+        <div id="kiriko" class="kiriko" role="img" aria-label="光るキリコ">
+          <div class="roof"></div>
+          <div class="top-ornaments">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="curtain"></div>
+          <div class="body">
+            <div class="paper">
+              <div class="ink">祭</div>
+              <div class="figure"></div>
+            </div>
+            <div class="side-lights left"></div>
+            <div class="side-lights right"></div>
+          </div>
+          <div class="base">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="ropes"></div>
+        </div>
+      </section>
+
+      <section id="startPanel" class="panel">
+        <h1>キリコAR</h1>
+        <p>カメラを起動して、画面上に光るキリコを表示します。</p>
+        <button id="startCamera" type="button">カメラを起動</button>
+      </section>
+
+      <section class="toolbar" aria-label="操作">
+        <button id="smaller" type="button">小さく</button>
+        <button id="larger" type="button">大きく</button>
+        <button id="reset" type="button">中央に戻す</button>
+      </section>
+
+      <p id="message" class="message" aria-live="polite"></p>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

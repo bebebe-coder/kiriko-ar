@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>キリコAR QR案内</title>
+    <link rel="stylesheet" href="./qr.css" />
+  </head>
+  <body>
+    <main>
+      <section class="sheet">
+        <p class="label">イベント用</p>
+        <h1>キリコAR</h1>
+        <p>スマホでQRコードを読み取ると、カメラ画面にキリコが表示されます。</p>
+
+        <label>
+          公開URL
+          <input id="urlInput" type="url" placeholder="https://example.com/kiriko-ar/" />
+        </label>
+
+        <div class="actions">
+          <button id="copyUrl" type="button">URLをコピー</button>
+          <a id="openApp" href="./index.html">ARを開く</a>
+        </div>
+
+        <div class="qr-guide">
+          <h2>QRコード作成手順</h2>
+          <ol>
+            <li>ARページをHTTPSで公開します。</li>
+            <li>公開URLをコピーします。</li>
+            <li>QRコード作成サービスや印刷ソフトに貼り付けます。</li>
+          </ol>
+        </div>
+
+        <p id="status" class="note">イベント当日は、公開URLをQRコードにします。</p>
+      </section>
+    </main>
+
+    <script src="./qr.js"></script>
+  </body>
+</html>
